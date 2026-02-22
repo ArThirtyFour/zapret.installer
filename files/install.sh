@@ -80,11 +80,11 @@ install_dependencies() {
     if [ "$kernel" = "Linux" ]; then
         . /etc/os-release
         declare -A command_by_ID=(
-            ["arch"]="pacman -S --noconfirm --needed ipset "
-            ["artix"]="pacman -S --noconfirm --needed ipset "
-            ["cachyos"]="pacman -S --noconfirm --needed ipset "
-            ["endeavouros"]="pacman -S --noconfirm --needed ipset "
-            ["manjaro"]="pacman -S --noconfirm --needed ipset "
+            ["arch"]="pacman -S --noconfirm --needed ipset libnetfilter_queue libnfnetlink libmnl"
+            ["artix"]="pacman -S --noconfirm --needed ipset libnetfilter_queue libnfnetlink libmnl"
+            ["cachyos"]="pacman -S --noconfirm --needed ipset libnetfilter_queue libnfnetlink libmnl"
+            ["endeavouros"]="pacman -S --noconfirm --needed ipset libnetfilter_queue libnfnetlink libmnl"
+            ["manjaro"]="pacman -S --noconfirm --needed ipset libnetfilter_queue libnfnetlink libmnl"
             ["debian"]="apt-get install -y iptables ipset "
             ["fedora"]="dnf install -y iptables ipset"
             ["ubuntu"]="apt-get install -y iptables ipset"
